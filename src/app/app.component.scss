@@ -1,0 +1,30 @@
+.menu {
+  margin: auto;
+  text-align: center;
+}
+
+.input-original-text {
+  border: 1px solid #cfcfcf;
+  outline: none;
+  border-radius: 16px;
+  padding: 0.4em;
+  font-size: 1.5em;
+}
+
+.result-conversion {
+  margin: auto;
+  padding: 0.8em;
+  border-radius: 16px;
+}
+
+.btn-copy {
+  padding: 0.8em;
+  font-size: 1em;
+  color: #fff;
+  background: rgb(143, 158, 9);
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
