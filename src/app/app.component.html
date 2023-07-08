@@ -2,14 +2,26 @@
   <div class="menu">
     <h1 style="margin-bottom: 1.5em">Converter texto para sigilos</h1>
 
+    <div style="margin-bottom: 2em">
+      <select
+      (change)="textWrote = ''"
+        #sigiloSelect
+        style="
+          background: none;
+          border: none;
+          color: #fff;
+          outline: none;
+          font-size: 1.2em;
+        "
+      >
+        <option style="color: #000" value="0">Sigilos do Conhecimento</option>
+        <option style="color: #000" value="1">Sigilos do Estrangeiro</option>
+      </select>
+    </div>
+
     <textarea
       type="text"
-      style="
-        width: 45vw;
-        height: 100px;
-        background: none;
-        color: #fff;
-      "
+      style="width: 45vw; height: 100px; background: none; color: #fff"
       class="input-original-text"
       [(ngModel)]="textWrote"
     ></textarea>
@@ -23,9 +35,13 @@
     <div class="result-conversion">
       <span
         id="texto"
+        [style]="
+          sigiloSelect.value === '0'
+            ? 'font-family: Conhecimento;'
+            : 'font-family: Estrangeiro;'
+        "
         style="
           font-size: 2em;
-          font-family: Sigilos;
           color: #e7e7e7;
           background: #1a1919;
           border: none;
@@ -34,7 +50,5 @@
         [innerHTML]="getFormattedText()"
       ></span>
     </div>
-
-
   </div>
 </body>
